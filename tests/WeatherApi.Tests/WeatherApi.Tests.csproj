@@ -7,6 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <RootNamespace>WeatherApi.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\WorkshopAPI\WorkshopAPI.csproj" />
+      <ProjectReference Include="..\..\src\WeatherApi\WeatherApi.csproj" />
     </ItemGroup>
 
 </Project>

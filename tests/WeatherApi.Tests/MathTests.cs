@@ -1,4 +1,4 @@
-namespace WorkshopAPI.Tests;
+namespace WeatherApi.Tests;
 
 using static Math;
 

@@ -1,4 +1,4 @@
-namespace WorkshopAPI;
+namespace WeatherApi;
 
 public static class Math
 {
