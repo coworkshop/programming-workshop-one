@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopAPI", "src\WorkshopAPI\WorkshopAPI.csproj", "{6CE646B2-7216-4858-A390-820E85EDA9F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopAPI.Tests", "tests\WorkshopAPI.Tests\WorkshopAPI.Tests.csproj", "{EABC7853-6663-4121-9E88-BF88836E454A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CE646B2-7216-4858-A390-820E85EDA9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE646B2-7216-4858-A390-820E85EDA9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE646B2-7216-4858-A390-820E85EDA9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE646B2-7216-4858-A390-820E85EDA9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABC7853-6663-4121-9E88-BF88836E454A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABC7853-6663-4121-9E88-BF88836E454A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABC7853-6663-4121-9E88-BF88836E454A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABC7853-6663-4121-9E88-BF88836E454A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
