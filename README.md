@@ -31,7 +31,7 @@ Endepunkt 1 og 2 er allerede implementert med tester, men testene er ganske rote
 
 ### Dokumentasjon
 - Denne filen (README.md) som gir en oversikt over oppsett, oppgaver og kjente use caser.
-- Architectural guidelines i docs/architectural-guidelines.md som forklarer avgjørelser tatt (og ikke tatt :)) i prosjektet.
+- Architectural guidelines i [docs/architectural-guidelines.md](docs/architectural-guidelines.md) som forklarer avgjørelser tatt (og ikke tatt :)) i prosjektet.
 - Tester som beskriver hva appen kan gjøre og det forventede resultatet. 
 - Swagger-dokumentasjon som beskriver API'et.
 
