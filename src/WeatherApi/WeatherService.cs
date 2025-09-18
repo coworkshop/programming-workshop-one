@@ -2,13 +2,25 @@ namespace WeatherApi;
 
 public class WeatherService : IWeatherService
 {
-    public Task<string> GetColdestWeather()
+    public async Task<string> GetColdestWeather()
     {
-        return Task.FromResult("Freezing");
+        var temperatureDescriptions = await WeatherDatabase.GetTemperatureDescriptions();
+        
+        var coldest = temperatureDescriptions
+            .OrderBy(td => td.TemperatureRange.Min)
+            .First();
+
+        return coldest.Description;
     }
 
-    public Task<string> GetHottestWeather()
+    public async Task<string> GetHottestWeather()
     {
-        return Task.FromResult("Scorching");
+        var temperatureDescriptions = await WeatherDatabase.GetTemperatureDescriptions();
+        
+        var hottest = temperatureDescriptions
+            .OrderByDescending(td => td.TemperatureRange.Max)
+            .First();
+
+        return hottest.Description;
     }
 }

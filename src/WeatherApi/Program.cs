@@ -24,10 +24,6 @@ app.MapControllers();
 
 app.Run();
 
-//var summaries = new[]
-//{
-//    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-//};
 
 //namespace WeatherApi
 //{
