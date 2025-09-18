@@ -2,7 +2,7 @@ namespace WeatherApi;
 
 public class WeatherService : IWeatherService
 {
-    public async Task<string> GetColdestWeather()
+    public async Task<WeatherTemperatureDescription> GetColdestWeather()
     {
         var temperatureDescriptions = await WeatherDatabase.GetTemperatureDescriptions();
         
@@ -10,10 +10,10 @@ public class WeatherService : IWeatherService
             .OrderBy(td => td.TemperatureRange.Min)
             .First();
 
-        return coldest.Description;
+        return coldest;
     }
 
-    public async Task<string> GetHottestWeather()
+    public async Task<WeatherTemperatureDescription> GetHottestWeather()
     {
         var temperatureDescriptions = await WeatherDatabase.GetTemperatureDescriptions();
         
@@ -21,6 +21,6 @@ public class WeatherService : IWeatherService
             .OrderByDescending(td => td.TemperatureRange.Max)
             .First();
 
-        return hottest.Description;
+        return hottest;
     }
 }

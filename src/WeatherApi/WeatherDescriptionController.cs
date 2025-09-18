@@ -10,7 +10,11 @@ public class WeatherDescriptionController(IWeatherService weatherService) : Cont
     public async Task<ActionResult<WeatherDescription>> GetColdestWeather()
     {
         var coldest = await weatherService.GetColdestWeather();
-        var weather = new WeatherDescription(coldest);
+        
+        var weather = new WeatherDescription(
+            coldest.TemperatureRange.Min,
+            coldest.TemperatureRange.Max,
+            coldest.Description);
 
         return weather;
     }
@@ -19,7 +23,11 @@ public class WeatherDescriptionController(IWeatherService weatherService) : Cont
     public async Task<ActionResult<WeatherDescription>> GetHottestWeather()
     {
         var hottest = await weatherService.GetHottestWeather();
-        var weather = new WeatherDescription(hottest);
+        
+        var weather = new WeatherDescription(
+            hottest.TemperatureRange.Min,
+            hottest.TemperatureRange.Max,
+            hottest.Description);
 
         return weather;
     }

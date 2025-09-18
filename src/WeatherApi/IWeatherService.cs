@@ -2,6 +2,6 @@ namespace WeatherApi;
 
 public interface IWeatherService
 {
-    Task<string> GetColdestWeather();
-    Task<string> GetHottestWeather();
+    Task<WeatherTemperatureDescription> GetColdestWeather();
+    Task<WeatherTemperatureDescription> GetHottestWeather();
 }

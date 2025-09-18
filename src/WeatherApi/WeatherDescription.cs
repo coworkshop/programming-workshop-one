@@ -1,3 +1,3 @@
 namespace WeatherApi;
 
-public record WeatherDescription(string Description);
+public record WeatherDescription(int Coldest, int Hottest, string Description);
