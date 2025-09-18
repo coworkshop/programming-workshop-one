@@ -21,6 +21,16 @@ public class WeatherTests
         Assert.NotNull(weather);
         Assert.Equal("Freezing", weather.Description);
     }
+    
+    [Fact]
+    public async Task FetchingHottestWeather_ScorchingIsReturned()
+    {
+        var response = await _weatherController.GetHottestWeather();
+        
+        var weather = response.Value;
+        Assert.NotNull(weather);
+        Assert.Equal("Scorching", weather.Description);
+    }
 }
 
 public class WeatherService : IWeatherService
@@ -28,6 +38,11 @@ public class WeatherService : IWeatherService
     public Task<string> GetColdestWeather()
     {
         return Task.FromResult("Freezing");
+    }
+
+    public Task<string> GetHottestWeather()
+    {
+        return Task.FromResult("Scorching");
     }
 }
 
@@ -42,11 +57,21 @@ public class WeatherController(IWeatherService weatherService) : ControllerBase
 
         return weather;
     }
+
+    [HttpGet("weather/description/hottest")]
+    public async Task<ActionResult<Weather>> GetHottestWeather()
+    {
+        var hottest = await weatherService.GetHottestWeather();
+        var weather = new Weather(hottest);
+
+        return weather;
+    }
 }
 
 public interface IWeatherService
 {
     Task<string> GetColdestWeather();
+    Task<string> GetHottestWeather();
 }
 
 public record Weather(string Description);
